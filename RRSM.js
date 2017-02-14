@@ -52,8 +52,9 @@ module.exports = function(CONFIG, RRSMCallback) {
 
   });
 
-  // Require version & query
+  // Require version, application.wadl & query
   require("./routes/version")(RRSM);
+  require("./routes/application.wadl")(RRSM);
   require("./routes/query")(RRSM);
 
   // Listen to incoming HTTP requests
