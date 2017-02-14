@@ -1,3 +1,15 @@
+/*
+ * Simple NodeJS Implementation of EIDA Federator
+ *
+ * Copyright Mathijs Koymans, 2016
+ *
+ * Only supports GET requests.
+ *
+ * Allowed query parameters:
+ * >>> (event)id
+ *
+ */
+
 "use strict";
 
 // RRSM Webservice is powered by express
@@ -8,10 +20,12 @@ const ERROR = require("./static/Error");
 const RequestHandler = require("./lib/Handler");
 const Path = require("path");
 
+// Wrap the service in a module
 module.exports = function(CONFIG, RRSMCallback) {
 
   RRSM.all(CONFIG.BASE_URL + "*", function(req, res, next) {
 
+    // Create a new request handler
     req.RequestHandler = new RequestHandler();
 
     // Service is closed
@@ -19,6 +33,7 @@ module.exports = function(CONFIG, RRSMCallback) {
       return new RRSMError(req, res, ERROR.SERVICE_CLOSED);
     }
 
+    // HTTP response finished
     res.on("finish", function() {
 
       req.RequestHandler.Logger.info({
@@ -37,6 +52,7 @@ module.exports = function(CONFIG, RRSMCallback) {
 
   });
 
+  // Require version & query
   require("./routes/version")(RRSM);
   require("./routes/query")(RRSM);
 
@@ -60,7 +76,7 @@ if(require.main === module) {
 
   const CONFIG = require("./Config");
 
-  // Start a single federator
+  // Start a single service
   new module.exports(CONFIG, function(message) {
     console.log(message);
   });

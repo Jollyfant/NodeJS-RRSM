@@ -11,6 +11,14 @@
     "code": 400,
     "message": "The submitted ID is invalid"
   },
+  "INVALID_PARAMETER": {
+    "code": 400,
+    "message": "The submitted parameter is invalid: %s"
+  },
+  "INVALID_REGEX": {
+    "code": 400,
+    "message": "The submitted regex for a key is invalid: %s"
+  },
   "SERVER_ERROR": {
     "code": 503,
     "message": "Internal server error"
