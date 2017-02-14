@@ -6,7 +6,7 @@
   "SEISCOMP_ROOT": "/home/sysop/seiscomp",
   "SEISCOMP_DB": "mysql://user:pass@host/db",
   "XSLTPROC_ROOT": "/usr/bin/xsltproc",
-  "SCHEMA_PATH": "/home/sysop/schemas/schema.xsl",
+  "SCHEMA_PATH": "./etc/schema.xsl",
   "BASE_URL": "/eidaws/rrsm/1/",
   "DOCUMENTATION_URI": "enter here",
   "VERSION": "1.0.0"
