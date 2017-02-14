@@ -1,0 +1,18 @@
+{
+  "SERVICE_CLOSED": {
+    "code": 513,
+    "message": "The service is closed for maintenance"
+  },
+  "EMPTY_ID": {
+    "code": 400,
+    "message": "No event ID was submitted"
+  },
+  "INVALID_ID": {
+    "code": 400,
+    "message": "The submitted ID is invalid"
+  },
+  "SERVER_ERROR": {
+    "code": 503,
+    "message": "Internal server error"
+  }
+}
