@@ -2,7 +2,7 @@
   "NAME": "ODC-RRSM-WEBSERVICE",
   "HOST": "127.0.0.1",
   "PORT": 3000,
-  "LOGPATH": "/home/orfeus/Mathijs/RRSM/logs/",
+  "LOGPATH": "/home/sysop/logs/",
   "SEISCOMP_ROOT": "/home/sysop/seiscomp",
   "SEISCOMP_DB": "mysql://user:pass@host/db",
   "XSLTPROC_ROOT": "/usr/bin/xsltproc",
