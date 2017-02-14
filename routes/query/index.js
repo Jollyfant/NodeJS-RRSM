@@ -8,6 +8,9 @@
  *
  * Returns quakeML from eventID as application/xml
  *
+ * Request pipeline:
+ * HTTP Request ID => SeisComp Event Dump => XSLT => HTTP Response
+ *
  */
 
 const CONFIG = require("../../Config");
