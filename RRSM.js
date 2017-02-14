@@ -25,6 +25,10 @@ module.exports = function(CONFIG, RRSMCallback) {
 
   RRSM.all(CONFIG.BASE_URL + "*", function(req, res, next) {
 
+    if(req.url === "./favicon.ico") {
+      return res.status(404).end();
+    }
+
     // Create a new request handler
     req.RequestHandler = new RequestHandler();
 
