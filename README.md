@@ -1,5 +1,7 @@
 # NodeJS-RRSM
-NodeJS Implementation of RRSM Webservice. Returns QuakeML from RRSM database based on the submitted event id.
+NodeJS Implementation of RRSM Webservice. Returns QuakeML from RRSM database based on the submitted event id. The service pipelines is as follows:
+
+    HTTP Request > SeisComp3 Event SC3ML > xsltproc to QuakeML > HTTP Response
 
 ## Configuration
 
