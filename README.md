@@ -1,5 +1,5 @@
 # NodeJS-RRSM
-NodeJS Implementation of RRSM Webservice
+NodeJS Implementation of RRSM Webservice. Returns QuakeML from RRSM database based on the submitted event id.
 
 ## Configuration
 
